@@ -7,7 +7,15 @@ const express = require('express')
 
     const app = express();
 
+    const {CONNECTION_STRING} =process.env
+
     app.use(bodyParser.json())
+
+    massive(CONNECTION_STRING).then(db => {
+        app.set('db', db)
+        console.log('connected')
+    })
+    // app.get('/api/houses', controller.gethouses)
 
     app.listen(4000, () => {
         console.log('Listening on port 4000')

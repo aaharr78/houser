@@ -20,8 +20,9 @@ class Dashboard extends Component {
     }
 
     render(){
+        return(
         <div>
-           Dashboard
+           <p>Dashboard</p>
            {
                this.state.houses.map((element, index) => {
                    return (
@@ -29,8 +30,8 @@ class Dashboard extends Component {
                    )
                })
            }
-           <button onClick={Wizard}>Add new Property</button>
+           <button onClick>Add new Property</button>
         </div>
-    }
+        )}
 }
 export default Dashboard

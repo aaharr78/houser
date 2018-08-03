@@ -1,26 +1,28 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Dashboard from '../Dashboard/Dashboard';
-
-    let initialState = {
-        name: '',
-        address: '',
-        city: '',
-        state: '',
-        zipcode: ''
-    }
+import { Route } from 'react-router-dom';
+import StepOne from './src/StepOne';
+import StepTwo from './src/StepTwo';
+import StepThree from './src.StepThree';
 
 class Wizard extends Component {
+    constructor() {
+        super()
 
-    render(){
-        <div>
-            <Wizard />
-            {/* <input name/>
-            <input address/>
-            <input city/>
-            <input state/>
-            <input zipcode/> */}
-            <button onClick={Dashboard}>Cancel</button>
-        </div>
+
+
+    }
+    render() {
+        return (
+            <div>
+                <Route component={StepOne} path='/Wizard/StepOne' />
+                <Route component={StepTwo} path='/Wizard/StepTwo' />
+                <Route component={StepThree} path='Wizard/StepThree' />
+                <button onClick={Dashboard}>Cancel</button>
+            </div>
+        )
+
     }
 }
+
 export default Wizard

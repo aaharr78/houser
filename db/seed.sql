@@ -9,3 +9,6 @@
 
 
 -- insert into houses(id, name, address, city, state, zipcode)
+
+-- alter table houses
+-- add image text, monthly_mortgage_amount integer,desired_rent INTEGER 

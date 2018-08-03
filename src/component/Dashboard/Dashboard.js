@@ -30,7 +30,7 @@ class Dashboard extends Component {
                    )
                })
            }
-           <button onClick>Add new Property</button>
+           <button onClick={Wizard}>Add new Property</button>
         </div>
         )}
 }

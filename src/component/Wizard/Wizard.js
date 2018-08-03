@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import StepOne from './src/StepOne';
 import StepTwo from './src/StepTwo';
 import StepThree from './src.StepThree';
+import {connect} from 'react-redux'
 
 class Wizard extends Component {
     constructor() {

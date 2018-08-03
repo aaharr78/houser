@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Dashboard from '../Dashboard/Dashboard';
-
+import {connect} from 'react-redux'
 
 
 class StepOne extends Component {
@@ -8,13 +8,7 @@ class StepOne extends Component {
         super()
 
 
-        let initialState = {
-            name: '',
-            address: '',
-            city: '',
-            state: '',
-            zipcode: ''
-        }
+        
     }
     handleName = (e) => {
         this.setState({
@@ -57,5 +51,14 @@ class StepOne extends Component {
         )
     }
 }
+function mapStateToProps(state) {
+    return {
+        name: state.name,
+        address: state.address,
+        city: state.city,
+        state: state.state,
+        zipcode: state.zipcode,
+    }
+}
 
-export default StepOne
+export default connect(mapStateToProps)(StepOne)

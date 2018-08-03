@@ -1,7 +1,7 @@
 import React from 'react';
 import Dashboard from './component/Dashboard/Dashboard';
 import Wizard from './component/Wizard/Wizard';
-
+import {connect} from 'react-redux'
 
 import { Switch, Route } from 'react-router-dom';
 
